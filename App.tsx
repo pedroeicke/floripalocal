@@ -1,11 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Listing from './pages/Listing';
-import Detail from './pages/Detail';
-import Publish from './pages/Publish';
+import { Listing } from './pages/listing';
+import { Detail } from './pages/detail';
+import { Publish } from './pages/publish';
 import AdultContentModal from './components/AdultContentModal';
 import { RESTRICTED_CATEGORIES } from './constants';
 
