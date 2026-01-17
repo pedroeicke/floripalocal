@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router'; // Removed for SPA
 import { MOCK_ADS } from '../constants';
 import { Ad } from '../types';
 import { Icon } from '../components/Icon';
@@ -919,12 +919,4 @@ interface PageProps {
   onNavigate: (page: string, params?: any) => void;
 }
 
-export default function DetailPage({ onNavigate }: PageProps) {
-  const router = useRouter();
-  const { id } = router.query;
-  
-  // Ensure ID is a string
-  const adId = Array.isArray(id) ? id[0] : id;
-
-  return <Detail onNavigate={onNavigate} id={adId} />;
-}
+export default Detail;
